@@ -17,6 +17,7 @@ h2 {
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   color: #444b54;
   margin: 70px auto;
+  margin-bottom: 0;
   padding: 40px;
 }
 .heading {
@@ -84,4 +85,8 @@ h2 {
 .w-100 {
   max-width: 30%;
   margin-top: 10px;
+}
+.source-code {
+  display: block;
+  margin: 5px 400px 70px 120px;
 }
