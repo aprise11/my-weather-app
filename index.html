@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+
+    <title>Weather app ⛅</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="heading">
+        <br />
+        <form id="city-search">
+          <input
+            class="form-control"
+            id="enter-city"
+            type="text"
+            placeholder="Enter city"
+          />
+          <div class="row-12">
+            <input
+              class="btn btn-light w-100"
+              type="submit"
+              value="Search"
+              id="search-button"
+            />
+            <button class="btn btn-light w-100" id="current-button">
+              Current
+            </button>
+          </div>
+        </form>
+        <br />
+
+        <div class="row">
+          <div class="col-6 location-date">
+            <h1 id="city"></h1>
+
+            <ul class="date-and-time">
+              <li id="todays-date">Monday 7 Nov</li>
+              <li id="current-time">13:50</li>
+            </ul>
+          </div>
+
+          <div class="col-6 todays-weather">
+            <img
+              class="head-icon"
+              src="media/partly-cloudy.png"
+              alt="Partly cloudy"
+            />
+            <span class="temperature" id="show-current-temp"
+              ><strong>13</strong></span
+            ><span class="units"
+              ><a href="#" id="degrees-celsius">°C</a>|<a
+                href="#"
+                id="degrees-fahrenheit"
+                >°F</a
+              ></span
+            >
+
+            <ul class="condition">
+              <li><span id="description"></span></li>
+              <li>Humidity: <span id="humidity"></span></li>
+              <li>Wind: <span id="wind"></span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="subheading">
+        <div class="row">
+          <div class="col-sm">
+            Friday
+            <div>
+              <img
+                src="media/clouds.png"
+                alt="Partly cloudy"
+                class="forecast-icon"
+              />
+            </div>
+            13°C
+          </div>
+          <div class="col-sm">
+            Saturday
+            <div>
+              <img
+                src="media/rain.png"
+                alt="Partly cloudy"
+                class="forecast-icon"
+              />
+            </div>
+            10°C
+          </div>
+          <div class="col-sm">
+            Sunday
+            <div>
+              <img
+                src="media/partly-cloudy.png"
+                alt="Partly cloudy"
+                class="forecast-icon"
+              />
+            </div>
+            13°C
+          </div>
+          <div class="col-sm">
+            Monday
+            <div>
+              <img
+                src="media/rain.png"
+                alt="Partly cloudy"
+                class="forecast-icon"
+              />
+            </div>
+            10°C
+          </div>
+          <div class="col-sm">
+            Tuesday
+            <div>
+              <img
+                src="media/partly-cloudy.png"
+                alt="Partly cloudy"
+                class="forecast-icon"
+              />
+            </div>
+            13°C
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
